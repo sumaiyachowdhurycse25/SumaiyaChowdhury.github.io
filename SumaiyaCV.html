@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html>
+<title>Sumaiya Chowdhury</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif} 
+/* Circular progress (uses CSS custom properties)
+  Usage (in HTML): <div class="circular-progress cp-md cp-teal" style="--value:80"><span class="cp-value">80%</span></div>
+  --value: 0..100
+  --color: progress color
+  --size: diameter
+  --thickness: ring thickness
+  --bg: inner circle background
+*/
+
+.circular-progress {
+  --size: 120px;
+  --thickness: 12px;
+  --value: 75;
+  --color: #00bcd4;
+  --bg: #fff;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* conic-gradient draws the filled portion then the track */
+  background: conic-gradient(var(--color) calc(var(--value) * 1%), #e6e6e6 0);
+  box-sizing: border-box;
+}
+
+/* inner circle to create ring effect */
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - var(--thickness) * 2);
+  height: calc(100% - var(--thickness) * 2);
+  background: var(--bg);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* label in the center */
+.circular-progress .cp-value {
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  color: #333;
+  font-size: calc(var(--size) * 0.24);
+  line-height: 1;
+}
+
+/* size helpers */
+.cp-sm { --size: 59px; --thickness: 8px; }
+.cp-md { --size: 80px; --thickness: 12px; }
+.cp-lg { --size: 120px; --thickness: 18px; }
+
+/* color helpers */
+.cp-teal   { --color: #00bcd4; }
+.cp-aqua   { --color: #00acc1; }
+.cp-orange { --color: #ff9800; }
+.cp-red    { --color: #f44336; }
+.cp-green  { --color: #4caf50; }
+
+/* optional simple grow animation (requires JS to toggle the --value inline style for animating from 0 to target) */
+.circular-progress.animate {
+  transition: background 800ms ease-out;
+}
+</style>
+
+ <body>
+
+<!-- Page Container -->
+
+<div class="w3-content w3-margin-top" style="max-width:1200px;">
+
+<header class="w3-container w3-center w3-margin-top w3-xxlarge w3-text-grey w3-padding-16" style="max-width:500px;">
+  <p>ACADEMIC CV</p> 
+</header>
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="pic1.JPG" style="width:100%" alt="Avatar">
+          
+        </div>
+        <div class="w3-container">
+          
+            <h2>Sumaiya Chowdhury</h2>
+          
+          
+         
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-brown"></i>sumaiyachowdhury.cse25@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-brown"></i>+8801915733990</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-brown"></i>+8801405609920</p>
+           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-brown"></i> Dhaka , Bangladesh</p>
+
+           <hr>
+
+          <p class="w3-xlarge"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-brown"></i>PROFESSIONAL SKILLS</b></p>
+          
+      
+          <p class="w3-large"><b><span class="w3-tag w3-teal w3-round">ARTIFICIAL INTELLIGENCE :</span></b></p>
+         <p class="w3-large"><b>Python Library :</b></p>
+         <div class="w3-row-padding" style="align-items:center;">
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="90" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">Scikit-learn</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="80" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">TensorFlow</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="80" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">Keras</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="80" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">OpenCV</div>
+            </div>
+
+            
+          </div>
+          <hr>
+          
+          <p class="w3-large"><b><span class="w3-tag w3-teal w3-round">DATA SCIENCE :</span></b></p>
+          <p class="w3-large"><b>Python Library :</b></p>
+          <div class="w3-row-padding" style="align-items:center;">
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="80" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">NumPy</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="80" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">Pandas</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="80" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">Data Visualization Tools</div>
+            </div>
+          </div>
+          <hr>
+         
+         <p class="w3-large"><b><span class="w3-tag w3-teal w3-round"> Others :</span></b></p>
+          <div class="w3-row-padding" style="align-items:center;">
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="80" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">SQL</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="80" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">Java</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="80" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">C</div>
+            </div>
+          </div>
+             
+          
+          
+         
+          <div class="w3-row-padding" style="align-items:center;">
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="50" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">C++</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="40" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">HTML</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="40" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">CSS</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="40" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">PHP</div>
+            </div>
+
+            <div class="w3-col s4" style="text-align:center; padding:8px;">
+              <div class="circular-progress cp-md cp-teal animate" data-value="40" style="--value:0">
+                <span class="cp-value">0%</span>
+              </div>
+              <div style="margin-top:8px;">JAVASCRIPT</div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-brown"></i>PROJECTS</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Brain Tumor Detection Using Convolutional Neural Network (CNN)</b></h5>
+          <h6 class="w3-text-brown"> Github Link:<a href="https://github.com/sumaiyachowdhurycse25/BrainTumorDetection.git" class="w3-button w3-hover-black w3-xlarge"><i class="fa fa-github fa-fw w3-margin-right w3-xlarge"></i></a></h6>
+         
+        
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Multiple Disease Prediction Using Machine Learning ( Stroke, Diabetes, Kidney Disease, Thyroid, Heart Disease, Breast Cancer & Parkinson )</b></h5>
+          <h6 class="w3-text-brown"> Github Link:<a href="https://github.com/sumaiyachowdhurycse25/Multiple-Disease-Prediction.git" class="w3-button w3-hover-black w3-xlarge"><i class="fa fa-github fa-fw w3-margin-right w3-xlarge"></i></a></h6>
+        
+      
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Poisonous or Edible Mushroom Recognizer Using  Machine Learning</b></h5>
+          <h6 class="w3-text-brown"> Github Link:<a href="https://github.com/sumaiyachowdhurycse25/Poisonous-or-Edible-Mushroom-.git" class="w3-button w3-hover-black w3-xlarge"><i class="fa fa-github fa-fw w3-margin-right w3-xlarge"></i></a></h6>
+          
+        </div>
+
+          <div class="w3-container">
+          <h5 class="w3-opacity"><b>Predicting Academic Performance of a Student with Machine Learning</b></h5>
+          <h6 class="w3-text-brown"> Github Link:<a href="https://github.com/sumaiyachowdhurycse25/Dropout_Academic_Success.git" class="w3-button w3-hover-black w3-xlarge"><i class="fa fa-github fa-fw w3-margin-right w3-xlarge"></i></a></h6>
+        
+      
+        </div>
+          <div class="w3-container">
+          <h5 class="w3-opacity"><b>Interior Decoration Web Project Using HTML, PHP, CSS, JAVASCRIPT & MYSQL</b></h5>
+          <h6 class="w3-text-brown"> Github Link:<a href="https://github.com/sumaiyachowdhurycse25/Interior.git" class="w3-button w3-hover-black w3-xlarge"><i class="fa fa-github fa-fw w3-margin-right w3-xlarge"></i></a></h6>
+        
+      
+        </div>
+
+
+      </div>
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-brown"></i>EDUCATION</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Bachelor of Science in Computer Science & Engineering</b></h5>
+          <h5 class="w3-opacity"><b><i class="fa fa-university fa-fw w3-margin-right w3-large"></i>North South University, Dhaka</b></h5>
+          <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2023</h6>
+          <h6 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>CGPA: 3.72 in the scale of 4.00</h6>
+          <hr>
+        </div>
+        
+          <div class="w3-container">
+          <h5 class="w3-opacity"><b>Higher Secondary Certificate</b></h5>
+          <h5 class="w3-opacity"><b><i class="fa fa-university fa-fw w3-margin-right w3-large "></i>Ideal School and College, Motijheel, Dhaka</b></h5>
+          <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right w3-large"></i>2016</h6>
+          <h6 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-large"></i>GPA: 4.42 in the scale of 5.00</h6>
+          <h6 class="w3-text-grey"><i class="fa fa-asterisk fa-fw w3-margin-right w3-large"></i>Group: Science; Board: Dhaka</h6>
+          <hr>
+        </div>
+        
+       <div class="w3-container">
+          <h5 class="w3-opacity"><b>Secondary School Certificate</b></h5>
+          <h5 class="w3-opacity"><b><i class="fa fa-university fa-fw w3-margin-right w3-large"></i>Ideal School and College, Motijheel, Dhaka</b></h5>
+          <h6 class="w3-text-grey"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014</h6>
+          <h6 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>GPA: 5.00 in the scale of 5.00</h6>
+          <h6 class="w3-text-grey"><i class="fa fa-asterisk fa-fw w3-margin-right"></i>Group: Science; Board: Dhaka</h6>
+          <br>
+        </div>
+      </div>
+      <br>
+<div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-large w3-padding-16"><i class="fa fa-globe fa-fw w3-margin-right w3-large w3-text-blue"></i>LANGUAGES : Bengali , English</h2>
+        </div>
+
+<div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-large w3-padding-16"><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-brown"></i>ADDRESS : House No - 432 (2nd Floor)  ; Road No - 17  ; Block - A  ;   Bashundhara R/A ; Dhaka - 1229 </h2>
+       
+      </div>
+    
+
+
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.circular-progress').forEach(function (el) {
+      var target = parseInt(el.getAttribute('data-value') || el.style.getPropertyValue('--value') || '0', 10);
+      el.style.setProperty('--value', 0);
+      // small delay so transition animates from 0
+      setTimeout(function () {
+        el.classList.add('animate');
+        el.style.setProperty('--value', target);
+        var label = el.querySelector('.cp-value');
+        if (!label) return;
+        var current = 0;
+        var step = Math.max(1, Math.ceil(target / 30));
+        var interval = setInterval(function () {
+          current = Math.min(target, current + step);
+          label.textContent = current + '%';
+          if (current >= target) clearInterval(interval);
+        }, 15);
+      }, 100);
+    });
+  });
+  </script>
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-brown w3-center w3-margin-top">
+  <p>Find me on Linkedin</p>
+  <a href="https://www.linkedin.com/in/sumaiya-chowdhury-5270b1390/" class="w3-button w3-light-grey w3-hover-black w3-margin-bottom"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+
+
+  
+</footer>
+</body>
+</html>
